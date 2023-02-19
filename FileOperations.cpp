@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -41,5 +41,42 @@ int main()
         }
         else cout << "File successfully deleted";
     }
-    else cout << "Invalid operation name!";
+    else if (operation == "Copy")
+    {
+        string from, to;
+        getline(cin, from);
+        getline(cin, to);
+        ifstream sourceFile(from.c_str());
+        ofstream destinationFile(to.c_str());
+        string line;
+        if (sourceFile and destinationFile)
+        {
+            while (getline(sourceFile, line))
+            {
+                destinationFile << line << "\n";
+            }
+            cout << "File successfully copied";
+        }
+        else cout << "Couldn't copy file!";
+    }
+    else if (operation == "Move")
+    {
+        string from, to;
+        getline(cin, from);
+        getline(cin, to);
+        ifstream sourceFile(from.c_str());
+        ofstream destinationFile(to.c_str());
+        string line;
+        if (sourceFile and destinationFile)
+        {
+            while (getline(sourceFile, line))
+            {
+                destinationFile << line << "\n";
+            }
+            remove(from.c_str());
+            cout << "File successfully moved";
+        }
+        else cout << "Couldn't move file!";
+    }
+    else cout << "Invalid operation!";
 }
