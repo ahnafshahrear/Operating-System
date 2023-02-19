@@ -1,5 +1,5 @@
-# Operating System
-## 3rd Year 2nd Semester - Operating System Lab
+# Operating System Lab
+## 3rd Year 2nd Semester
 
 ## Author
 
@@ -12,11 +12,9 @@
 
 # Index
 - File Operations
-	- Create File
-	- Rename File
-	- Delete File
-	- Copy File
-	- Move File
+	- Create, Rename & Delete File
+	- Copy & Move File
+
 - Scheduling Algorithms
 	- First Come First Serve
 	- Shortest Job First
