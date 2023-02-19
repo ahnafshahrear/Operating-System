@@ -5,7 +5,7 @@ using namespace std;
 struct process
 {
     string id;
-    int burst, burstCopy, arrival;
+    int burst, backupBurst, arrival;
     int waiting = 0, completion = 0, turnaround = 0;
 };
 
@@ -17,14 +17,18 @@ bool compareProcess(process x, process y)
 
 int main()
 {
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+
     int size;
     cin >> size;
     vector<process> x(size);
-    // Input format: Process-Id Burst-Time Arrival-Time
+
+    // Input format: Process-Id Arrival-Time  Burst-Time
     for (int i = 0; i < size; i++)
     {
         cin >> x[i].id >> x[i].arrival >> x[i].burst;
-        x[i].burstCopy = x[i].burst;
+        x[i].backupBurst = x[i].burst;
     }
 
     // Main calculation
@@ -39,6 +43,12 @@ int main()
             if (x[i].arrival <= now and x[i].burst)
             {
                 x[i].burst--;
+                if (!x[i].burst)
+                {
+                    x[i].completion = now;
+                    x[i].turnaround = x[i].completion - x[i].arrival;
+                    x[i].waiting = x[i].turnaround - x[i].backupBurst;
+                }
                 if (ans.size() and ans.back().first == x[i].id)
                 {
                     ans.back().second = ++now;
@@ -50,16 +60,18 @@ int main()
         }
         if (!flag) break;
     }
-    // Output
-    string op = "|";
+    // Gantt Chart output
+    string op = "|", border = "-";
     for (auto v: ans)
     {
         op += "  " + v.first + "  |";
+        border += "-------";
     }
-    for (char ch: op) cout << "-";
-    cout << "\n" << op << "\n";
-    for (char ch: op) cout << "-";
-    cout << "\n0";
+    cout << border << "\n"
+         << op << "\n"
+         << border << "\n0";
+    
+    // Time output
     int in = 0;
     for (int i = 1; op[i]; i++)
     {
@@ -71,5 +83,7 @@ int main()
         else if (op[i + 1] == '|' and i + 2 == op.size());
         else cout << " ";
     }
+    // Average Waiting time, Turnaround time & Completion time output
+    // It can be done easily
     return 0;
 }
