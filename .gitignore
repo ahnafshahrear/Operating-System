@@ -1,3 +1,6 @@
 .cph/
 .vscode/
 *.bin
+*.o
+*.exe
+*.class
