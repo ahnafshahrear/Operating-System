@@ -48,8 +48,8 @@ int main()
         string from, to;
         getline(cin, from);
         getline(cin, to);
-        ifstream sourceFile(from.c_str());
-        ofstream destinationFile(to.c_str());
+        ifstream sourceFile(from.c_str(), ios::binary);
+        ofstream destinationFile(to.c_str(), ios::binary);
         string line;
         if (sourceFile and destinationFile)
         {
@@ -66,8 +66,8 @@ int main()
         string from, to;
         getline(cin, from);
         getline(cin, to);
-        ifstream sourceFile(from.c_str());
-        ofstream destinationFile(to.c_str());
+        ifstream sourceFile(from.c_str(), ios::binary);
+        ofstream destinationFile(to.c_str(), ios::binary);
         string line;
         if (sourceFile and destinationFile)
         {

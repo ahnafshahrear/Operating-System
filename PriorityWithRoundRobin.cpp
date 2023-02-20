@@ -23,6 +23,7 @@ int main()
     for (int i = 0; i < size; i++)
     {
         cin >> x[i].id >> x[i].burst >> x[i].priority;
+        x[i].backup = x[i].burst;
         priorities.insert(x[i].priority);
     }
     priorities.insert(1e5);
@@ -92,8 +93,18 @@ int main()
         else if (op[i + 1] == '|' and i + 2 == op.size());
         else cout << " ";
     }
+
     // Average Waiting time, Turnaround time & Completion time output
-    // It can be done easily
+    cout << "\n\nProcess | Waiting Time | Completion Time | Turnaround Time\n";
+    cout << "----------------------------------------------------------\n";
+    for (int i = 0; i < size; i++)
+    {
+        cout << x[i].id << "        " << x[i].waiting << "             ";
+        if (x[i].waiting < 10) cout << " ";
+        cout << x[i].completion << "                 ";
+        if (x[i].completion < 10) cout << " "; 
+        cout << x[i].turnaround << "\n";
+    }
     return 0;
 }
 

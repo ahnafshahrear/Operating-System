@@ -43,6 +43,7 @@ int main()
             if (x[i].arrival <= time and x[i].burst)
             {
                 x[i].burst--;
+                time++;
                 if (!x[i].burst)
                 {
                     x[i].completion = time;
@@ -51,9 +52,9 @@ int main()
                 }
                 if (timeline.size() and timeline.back().first == x[i].id)
                 {
-                    timeline.back().second = ++time;
+                    timeline.back().second = time;
                 }
-                else timeline.push_back({x[i].id, ++time});
+                else timeline.push_back({x[i].id, time});
                 flag = true;
                 break;
             }
@@ -83,8 +84,18 @@ int main()
         else if (op[i + 1] == '|' and i + 2 == op.size());
         else cout << " ";
     }
+    
     // Average Waiting time, Turnaround time & Completion time output
-    // It can be done easily
+    cout << "\n\nProcess | Waiting Time | Completion Time | Turnaround Time\n";
+    cout << "----------------------------------------------------------\n";
+    for (int i = 0; i < size; i++)
+    {
+        cout << x[i].id << "        " << x[i].waiting << "             ";
+        if (x[i].waiting < 10) cout << " ";
+        cout << x[i].completion << "                 ";
+        if (x[i].completion < 10) cout << " "; 
+        cout << x[i].turnaround << "\n";
+    }
     return 0;
 }
 
