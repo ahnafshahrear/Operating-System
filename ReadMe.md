@@ -1,19 +1,20 @@
 # Operating System Lab
-## 3rd Year 2nd Semester | Codes are not updated!
+### 3rd Year 2nd Semester - Computer Science & Engineering, University of Rajshahi
+## N.B: Some codes will be updated!
 
 ## Author
-
-- [@ahnafshahrear](https://github.com/ahnafshahrear)
+- Ahnaf Shahrear Khan - [@ahnafshahrear](https://github.com/ahnafshahrear)
+- Gmail - ahnafshahrearkhan@gmail.com
 
 ## Language
 
 - C++
 - Java
 
-# Index
+## Index
 - File Operations
-	- Create, Rename & Delete File
-	- Copy & Move File
+	- Create, Rename & Delete File ✓
+	- Copy & Move File ✓
 
 - Scheduling Algorithms
 	- First Come First Serve
@@ -22,3 +23,8 @@
 	- Round Robin
 	- Priority Scheduling
 	- Priority Scheduling with Round Robin
+
+- Dynamic Storage Allocation Problems
+	- First Fit ✓
+	- Best Fit ✓
+	- Worst Fit ✓
