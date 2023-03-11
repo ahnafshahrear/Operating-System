@@ -30,3 +30,13 @@ int main()
     }
     cout << "No suitable hole available!";
 }
+
+/*
+Input:
+7
+12 3 5 32 43 9 7
+27
+
+Output: 
+The process is allocated into 32 mb memory hole.
+*/
