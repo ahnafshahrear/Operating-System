@@ -8,6 +8,11 @@ struct process
     int burst, waiting, turnaround;
 };
 
+bool compareProcess(process x, process y)
+{
+    return x.burst < y.burst;
+}
+
 int main()
 {
     int size;
@@ -18,7 +23,8 @@ int main()
     {
         cin >> x[i].id >> x[i].burst;
     }
-    
+    sort(x.begin(), x.end(), compareProcess);
+
     int time_now = 0;
     double avg_waiting = 0, avg_turnaround = 0;
     vector<pair<string, int>> timeline;
@@ -60,7 +66,7 @@ int main()
 
     cout << "\n\n"
          << "Average waiting time = " << avg_waiting / size << "\n"
-         << "Average waiting time = " << avg_turnaround / size << "\n\n"
+         << "Average turnaround time = " << avg_turnaround / size << "\n\n"
          << "Process   |   Waiting Time   |   Turnaround Time\n"
          << "------------------------------------------------\n";
     for (int i = 0; i < size; i++)
@@ -72,28 +78,25 @@ int main()
 }
 
 /*
-Input:
-5
-P1 3
-P2 1
-P3 5
-P4 2
-P5 4
+4
+P1 6
+P2 8
+P3 7
+P4 3
 
 Output:
-------------------------------------
-|  P1  |  P2  |  P3  |  P4  |  P5  |
-------------------------------------
-0      3      4      9      11     15 
+-----------------------------
+|  P4  |  P1  |  P3  |  P2  |
+-----------------------------
+0      3      9      16     24
 
-Average waiting time = 5.4
-Average waiting time = 8.4
+Average waiting time = 7
+Average turnaround time = 13
 
 Process   |   Waiting Time   |   Turnaround Time
 ------------------------------------------------
-P1              0                   3
-P2              3                   4
-P3              4                   9
-P4              9                   11
-P5              11                  15
+P4              0                   3
+P1              3                   9
+P3              9                   16
+P2              16                  24
 */
