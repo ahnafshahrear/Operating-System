@@ -2,8 +2,6 @@
 
 using namespace std;
 
-// ahnafshahrearkahn@gmail.com
-
 // File Name Format: "F:\\C++ Codes\\Operating System Lab\\x.txt"
 
 int main()
@@ -16,8 +14,7 @@ int main()
         string name;
         getline(cin, name);
         ofstream newFile(name.c_str());
-        time_t timeNow = chrono::system_clock::to_time_t(chrono::system_clock::now());
-        newFile << "File has created\nTime: " << ctime(&timeNow) << endl;
+        newFile << "File is created\n";
         newFile.close();
     }
     else if (operation == "Rename")
