@@ -60,7 +60,7 @@ int main()
 
     cout << "\n\n"
          << "Average waiting time = " << avg_waiting / size << "\n"
-         << "Average turnaround time = " << avg_turnaround / size << "\n\n"
+         << "Average waiting time = " << avg_turnaround / size << "\n\n"
          << "Process   |   Waiting Time   |   Turnaround Time\n"
          << "------------------------------------------------\n";
     for (int i = 0; i < size; i++)
@@ -73,23 +73,27 @@ int main()
 
 /*
 Input:
-3
-P1 24
-P2 3
-P3 3
+5
+P1 3
+P2 1
+P3 5
+P4 2
+P5 4
 
 Output:
-----------------------
-|  P1  |  P2  |  P3  |
-----------------------
-0      24     27     30
+------------------------------------
+|  P1  |  P2  |  P3  |  P4  |  P5  |
+------------------------------------
+0      3      4      9      11     15 
 
-Average waiting time = 17
-Average turnaround time = 27
+Average waiting time = 5.4
+Average waiting time = 8.4
 
 Process   |   Waiting Time   |   Turnaround Time
 ------------------------------------------------
-P1              0                   24
-P2              24                  27
-P3              27                  30
+P1              0                   3
+P2              3                   4
+P3              4                   9
+P4              9                   11
+P5              11                  15
 */
