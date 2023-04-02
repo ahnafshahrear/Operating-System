@@ -42,7 +42,7 @@ bool safetyAlgorithm()
                 found = true;
                 serial.push_back(i + '0');
                 serial.push_back(' ');
-                break;
+                // break;
             }
         }
         if (!found) break;

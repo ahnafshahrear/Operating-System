@@ -9,22 +9,19 @@ int main()
     vector<int> holes(hole);
     for (int i = 0; i < hole; i++)
     {
-        cin >> holes[i];
+        cin >> holes[i]; // Free memory hole's size
     }
     
     int size; // Process size
     cin >> size;
 
-    for (int x: holes)
+    sort(holes.begin(), holes.end());
+    if (holes.back() >= size)
     {
-        if (x >= size)
-        {
-            cout << "The process is allocated into "
-                 << x << " mb memory hole.";
-            return 0;
-        }
+        cout << "The process is allocated into " << holes.back() 
+             << " mb memory hole.";
     }
-    cout << "No suitable hole available!";
+    else cout << "No suitable hole available!";
 }
 
 /*
@@ -35,4 +32,12 @@ Input:
 
 Output: 
 The process is allocated into 32 mb memory hole.
+
+Input:
+7
+12 3 5 32 43 9 7
+45
+
+Output: 
+No suitable hole available!
 */
