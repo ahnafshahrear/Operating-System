@@ -13,8 +13,8 @@
 - **Write a program for implementation of Shortest Job First algorithm ✓**
 - **Write a program for implementation of Round Robin Algorithm ✓**
 - **Write a program for implementation of Priority Scheduling algorithm ✓**
-- **Write a program to implement Banker's Algorithm for deadlock avoidance**
-- **Write a program to implement algorithm for Deadlock Detection**
+- **Write a program to implement Banker's Algorithm for deadlock avoidance ✓**
+- **Write a program to implement algorithm for Deadlock Detection ✓**
 - **Write a program to implement Threading & Synchronization applications**
 - **Write a program to implement memory allocation methods for fixed partition using First Fit ✓**
 - **Write a program to implement memory allocation methods for fixed partition using Best Fit ✓**
