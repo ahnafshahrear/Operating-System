@@ -59,15 +59,15 @@ bool safetyAlgorithm(vector<int> work, vector<process> x)
 
 int main()
 {
-    int no_of_process, no_of_resource;
-    
+    int no_of_resource; // Total number of resources
     cin >> no_of_resource;
     vector<int> available(no_of_resource);
-    for (int &a: available)
+    for (int &value: available)
     {
-        cin >> a;
+        cin >> value; // Total number of each available resource instances
     }
 
+    int no_of_process; // Total number of processes
     cin >> no_of_process;
     vector<process> x(no_of_process);
     for (int i = 0; i < no_of_process; i++)
@@ -75,13 +75,13 @@ int main()
         x[i].max_need.resize(no_of_resource);
         x[i].allocation = x[i].need = x[i].max_need;
         cin >> x[i].id;
-        for (int &a: x[i].allocation)
+        for (int &value: x[i].allocation)
         {
-            cin >> a;
+            cin >> value; // Total number of already allocated resources
         }
         for (int j = 0; j < no_of_resource; j++)
         {
-            cin >> x[i].max_need[j];
+            cin >> x[i].max_need[j]; // Maximum number resources a process can request
             x[i].need[j] = x[i].max_need[j] - x[i].allocation[j];
         }
     }
