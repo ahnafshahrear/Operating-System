@@ -16,9 +16,9 @@
 - **Write a program to implement Banker's Algorithm for deadlock avoidance**
 - **Write a program to implement algorithm for Deadlock Detection**
 - **Write a program to implement Threading & Synchronization applications**
-- **Write a program to implement memory allocation methods for fixed partition using First Fit**
-- **Write a program to implement memory allocation methods for fixed partition using Best Fit**
-- **Write a program to implement memory allocation methods for fixed partition using Worst Fit**
+- **Write a program to implement memory allocation methods for fixed partition using First Fit ✓**
+- **Write a program to implement memory allocation methods for fixed partition using Best Fit ✓**
+- **Write a program to implement memory allocation methods for fixed partition using Worst Fit ✓**
 - **Write a program to implement Paging Technique for memory management**
 - **Write a program to implement First In First Out page replacement algorithm**
 - **Write a program to implement Least Recently Used page replacement algorithm**

@@ -17,7 +17,7 @@ int main()
     vector<int> frames(size, -1);
     queue<int> q;
     int miss = 0;
-    vector<int> seq = {7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1};
+    vector<int> seq = {7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1};
     for (int x: seq)
     {
         cout << x << " -> ";
