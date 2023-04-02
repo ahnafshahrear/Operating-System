@@ -63,9 +63,9 @@ int main()
     
     cin >> no_of_resource;
     vector<int> available(no_of_resource);
-    for (int i = 0; i < no_of_resource; i++)
+    for (int &a: available)
     {
-        cin >> available[i];
+        cin >> a;
     }
 
     cin >> no_of_process;
