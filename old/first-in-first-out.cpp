@@ -7,6 +7,7 @@ void printFrame(vector<int> frames)
     for (int x: frames)
     {
         if (x != -1) cout << x <<  " "; 
+        else cout << "- ";
     }
     cout << "\n";
 }
