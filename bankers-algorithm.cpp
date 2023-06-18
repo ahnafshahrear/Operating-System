@@ -69,9 +69,9 @@ int main()
         x[i].max_need.resize(no_of_resource); //... Vector max_need size = no_of_resource
         x[i].allocation = x[i].need = x[i].max_need;
         cin >> x[i].id;
-        for (int &value: x[i].allocation)
+        for (int j = 0; j < no_of_resource; j++)
         {
-            cin >> value; //... Total number of already allocated resources
+            cin >> x[i].allocation[j]; //... Total already allocated resources
         }
         for (int j = 0; j < no_of_resource; j++)
         {
@@ -126,9 +126,9 @@ int main()
 
 }
 
-/*//...
-Input:
--------------------------
+/*//... Input Output:
+
+...............Input:
 3
 3 3 2
 5
@@ -140,14 +140,12 @@ T4   0 0 2   4 3 3
 4
 3 3 0
 
-Output:
--------------------------
+..............Output:
 T1 T3 T4 T0 T2 
 The system is in a safe state
 The process must wait & old resource-allocation state is restored
 
-Input:
--------------------------
+...............Input:
 3
 3 3 2
 5
@@ -159,10 +157,10 @@ T4   0 0 2   4 3 3
 0
 0 2 0
 
-Output:
--------------------------
+..............Output:
 T1 T3 T4 T0 T2 
 The system is in a safe state
 T3 T1 T2 T0 T4 
 Safe State exists. So, the resources are allocated
-*///...
+
+*///... Ahnaf Shahrear Khan...
