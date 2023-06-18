@@ -13,7 +13,7 @@
 	- **Shortest Job First algorithm ✓**
 	- **Round Robin algorithm ✓**
 	- **Priority Scheduling algorithm ✓**
-- **Deadlock deteection & avoidance algorithms ✓**
+- **Implementation of Deadlock deteection & avoidance algorithms ✓**
 	- **Banker's algorithm for deadlock avoidance ✓**
 	- **Deadlokck Detection algorithm ✓**
 	- **Resource Allocation Graph ✓**
