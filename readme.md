@@ -25,7 +25,7 @@
 - **Implementation of Paging Technique for Memory Management**
 - **Implementation of Page Replacement algorithms**
 	- **First In First Out ✓**
-	- **Least Recently Used**
-	- **Least Frequently Used**
+	- **Least Recently Used ✓**
+	- **Least Frequently Used ✓**
 	- **Second Chance**
 	- **Enhanced Second Chance**
