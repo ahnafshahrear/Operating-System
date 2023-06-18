@@ -20,10 +20,7 @@ bool safetyAlgorithm(vector<int> work, vector<process> x)
         bool found = false;
         for (int i = 0; i < no_of_process; i++)
         {
-            if (finish[i])
-            {
-                continue;
-            }
+            if (finish[i]) continue;
             bool ok = true;
             for (int j = 0; j < no_of_resource; j++)
             {
@@ -48,10 +45,7 @@ bool safetyAlgorithm(vector<int> work, vector<process> x)
     }
     for (int i = 0; i < no_of_process; i++)
     {
-        if (!finish[i])
-        {
-            return false;
-        }
+        if (!finish[i]) return false;
     }
     cout << sequence << "\n";
     return true;
