@@ -14,7 +14,7 @@ void dfs(string node)
     {
         if (vis[n])
         {
-            if (n == source)
+            if (n == source) //... Cycle exists
             {
                 deadlock = true;
             }
@@ -25,15 +25,15 @@ void dfs(string node)
 
 int main()
 {
-    set<string> nodes;
+    set<string> nodes; //... Contains all the process & resources
     string from, to;
     while (cin >> from >> to)
     {
-        graph[from].insert(to);
+        graph[from].insert(to); //... The edge direction is "from" -> "to"
         nodes.insert(from);
         nodes.insert(to);
     }
-    for (string node: nodes)
+    for (string node: nodes) //... Checking every node as source for cycle detection
     {
         for (string n: nodes)
         {
@@ -50,8 +50,9 @@ int main()
     cout << "No Deadlock";
 }
 
-/*
-Input:
+/*//... Input Output:
+
+...............Input:
 T1 R1
 R1 T2
 T2 R3
@@ -64,10 +65,10 @@ R5 T4
 T4 R2
 R2 T1
 
-Output:
+..............Output:
 Deadlock
 
-Input:
+...............Input:
 T1 R1
 T2 R3
 R3 T5
@@ -79,6 +80,7 @@ R5 T4
 T4 R2
 R2 T1
 
-Output:
+..............Output:
 No Deadlock
-*/
+
+*///... Ahnaf Shahrear Khan...
