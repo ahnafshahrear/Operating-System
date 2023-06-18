@@ -14,7 +14,7 @@ void dfs(string node)
     {
         if (vis[n])
         {
-            if (n == src)
+            if (n == src) //... Means a cycle is found
             {
                 deadlock = true;
             }
@@ -25,15 +25,15 @@ void dfs(string node)
 
 int main()
 {
-    set<string> nodes;
-    string n1, n2;
+    set<string> nodes; //... Contains all the processes & resources
+    string n1, n2; 
     while (cin >> n1 >> n2)
     {
-        graph[n1].insert(n2);
+        graph[n1].insert(n2); //... The edge direction is from "n1" to "n2"
         nodes.insert(n1);
         nodes.insert(n2);
     }
-    for (string node: nodes)
+    for (string node: nodes) //... Checking every node for cycle
     {
         for (string node: nodes)
         {
@@ -50,8 +50,9 @@ int main()
     cout << "No Deadlock";
 }
 
-/*
+/*//...
 Input:
+---------------
 T1 R1
 R1 T2
 T2 R3
@@ -65,10 +66,11 @@ T4 R2
 R2 T1
 
 Output:
+---------------
 Deadlock
-*/
 
-/*Input:
+Input:
+---------------
 T1 R1
 T2 R3
 R3 T5
@@ -81,5 +83,6 @@ T4 R2
 R2 T1
 
 Output:
+---------------
 No Deadlock
-*/
+*///...
