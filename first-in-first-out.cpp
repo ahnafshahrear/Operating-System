@@ -59,7 +59,7 @@ int main()
     cout << "Total page fault = " << miss;
 }
 
-/*
+/*//...
 Input:
 --------------------
 3
@@ -88,4 +88,4 @@ Output:
 0 -> 7 0 2
 1 -> 7 0 1
 Total page fault = 15
-*/
+*///...
