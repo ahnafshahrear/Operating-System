@@ -17,12 +17,14 @@ int main()
     int size; //... Total number of frames
     cin >> size;
     vector<int> frames(size, -1);
-    queue<int> arrival_order;
+    map<int, int> last_used;
     int miss = 0;
-
+    int time_now = 1;
+    
     int page;
     while(cin >> page)
     {
+        last_used[page] = time_now++;
         bool found = false;
         for (int x: frames)
         {
@@ -38,13 +40,19 @@ int main()
             continue;
         }
         miss++;
-        int out = -1;
-        if (arrival_order.size() >= size)
+        int out = frames[0];
+        for (auto x: frames)
         {
-            out = arrival_order.front();
-            arrival_order.pop();
+            if (x == -1) 
+            {
+                out = x;
+                break;
+            }
+            if (last_used[x] < last_used[out])
+            {
+                out = x;
+            }
         }
-        arrival_order.push(page);
         for (int &x: frames)
         {
             if (x == out)
@@ -59,8 +67,7 @@ int main()
     cout << "Total page fault = " << miss;
 }
 
-/**************************************************
-
+/*//...
 Input:
 --------------------
 3
@@ -73,21 +80,20 @@ Output:
 1 -> 7 0 1
 2 -> 2 0 1
 0 ->
-3 -> 2 3 1
-0 -> 2 3 0
-4 -> 4 3 0
-2 -> 4 2 0
-3 -> 4 2 3
-0 -> 0 2 3
+3 -> 2 0 3
+0 ->
+4 -> 4 0 3
+2 -> 4 0 2
+3 -> 4 3 2
+0 -> 0 3 2
 3 ->
 2 ->
-1 -> 0 1 3
-2 -> 0 1 2
+1 -> 1 3 2
+2 ->
+0 -> 1 0 2
+1 ->
+7 -> 1 0 7
 0 ->
 1 ->
-7 -> 7 1 2
-0 -> 7 0 2
-1 -> 7 0 1
-Total page fault = 15
-
-**************************************************/
+Total page fault = 12
+*///...
