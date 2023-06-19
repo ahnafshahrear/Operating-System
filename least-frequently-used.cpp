@@ -17,7 +17,7 @@ int main()
     int size; //... Total number of frames
     cin >> size;
     vector<int> frames(size, -1);
-    map<int, int> count;
+    map<int, int> count; //... How many times a page is used
     int miss = 0;
     
     int page;
@@ -66,14 +66,13 @@ int main()
     cout << "Total page fault = " << miss;
 }
 
-/*//...
-Input:
---------------------
+/*//... Input Output:
+
+...............Input:
 3
 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
 
-Output:
---------------------
+..............Output:
 7 -> 7 - -
 0 -> 7 0 -
 1 -> 7 0 1
@@ -95,4 +94,5 @@ Output:
 0 ->
 1 -> 2 0 1
 Total page fault = 13
-*///...
+
+*///... Ahnaf Shahrear Khan...
