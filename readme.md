@@ -7,25 +7,19 @@
 - **Gmail: ahnafshahrearkhan@gmail.com**
 
 ## Index
-- **Create, Rename, Delete, Copy & Move file operation functions ✓**
-- **Implementation of process schedulig algorithms ✓**
-	- **First Come First Serve algorithm ✓**
-	- **Shortest Job First algorithm ✓**
-	- **Round Robin algorithm ✓**
-	- **Priority Scheduling algorithm ✓**
-- **Implementation of Deadlock deteection & avoidance algorithms ✓**
-	- **Banker's algorithm for deadlock avoidance ✓**
-	- **Deadlokck Detection algorithm ✓**
-	- **Resource Allocation Graph ✓**
-- **Implementation of Threading & Synchronization applications**
-- **Implementation of Memory Allocation algorithms ✓**
-	- **First Fit ✓**
-	- **Best Fit ✓**
-	- **Worst Fit ✓**
-- **Implementation of Paging Technique for Memory Management**
-- **Implementation of Page Replacement algorithms**
-	- **First In First Out ✓**
-	- **Least Recently Used ✓**
-	- **Least Frequently Used ✓**
-	- **Second Chance**
-	- **Enhanced Second Chance**
+- **Simulate the Create, Rename, Delete, Copy & Move file operation functions of OS ✓**
+- **Implement the FCFS or First Come First Serve CPU scheduling algorithm ✓**
+- **Implement the SJF or Shortest Job First CPU scheduling algorithm ✓**
+- **Implement the Round Robin CPU scheduling algorithm ✓**
+- **Implement the Priority Scheduling CPU scheduling algorithm ✓**
+- **Implement the Banker's Algorithm for deadlock detection & avoidance ✓**
+- **Implement the algorithm for Deadlock Detection ✓**
+- **Implement the Resource Allocation Graph ✓**
+- **Implement the Threading & Synchronization applications of an Operating System**
+- **Implement the Memory Allocation Methods for fixed partition using First Fit, Best Fit & Worst Fit ✓**
+- **Implement the Paging Technique for memory management**
+- **Implement the FIFO or First In First Out page replacement algorithm ✓**
+- **Implement the LRU or Least Recently Used page replacement algorithm ✓**
+- **Implement the Least Frequently Used page replacement algorithm ✓**
+- **Implement the Second Chance & Enhanced Second Chance page replacement algorithm**
+
