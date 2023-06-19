@@ -45,7 +45,7 @@ int main()
         gantt_chart += "  " + z.first + "  |";
         border += "-------";
     }
-    cout << border << "\n" 
+    cout << "Gantt Chart:\n" << border << "\n" 
          << gantt_chart << "\n"
          << border << "\n"
          << "0";
@@ -77,7 +77,9 @@ int main()
     }
 }
 
-/*
+/*//... Input Output:
+
+...............Input:
 5
 P1 10 3
 P2 1 1
@@ -85,7 +87,8 @@ P3 2 4
 P4 1 5
 P5 5 2
 
-Output:
+..............Output:
+Gantt Chart:
 ------------------------------------
 |  P2  |  P5  |  P1  |  P3  |  P4  |
 ------------------------------------
@@ -101,4 +104,5 @@ P5              1                   6
 P1              6                   16
 P3              16                  18
 P4              18                  19
-*/
+
+*///... Ahnaf Shahrear Khan...
