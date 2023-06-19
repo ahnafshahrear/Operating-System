@@ -17,7 +17,7 @@ int main()
     int size; //... Total number of frames
     cin >> size;
     vector<int> frames(size, -1);
-    map<int, int> last_used;
+    map<int, int> last_used; //... Last used time of a page
     int miss = 0;
     int time_now = 1;
     
@@ -67,14 +67,13 @@ int main()
     cout << "Total page fault = " << miss;
 }
 
-/*//...
-Input:
---------------------
+/*//... Input Output:
+
+...............Input:
 3
 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
 
-Output:
---------------------
+..............Output:
 7 -> 7 - -
 0 -> 7 0 -
 1 -> 7 0 1
@@ -96,4 +95,5 @@ Output:
 0 ->
 1 ->
 Total page fault = 12
-*///...
+
+*///... Ahnaf Shahrear Khan...
