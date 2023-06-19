@@ -14,9 +14,9 @@ int main()
         string name;
         getline(cin, name);
         ofstream newFile(name.c_str());
-        newFile << "Hello World\n";
         cout << "File successfully created";
-        newFile.close();
+        newFile << "Hello World";
+        newFile.close(); 
     }
     else if (operation == "Rename")
     {
@@ -73,7 +73,7 @@ int main()
             {
                 destinationFile << line << "\n";
             }
-            sourceFile.close();
+            sourceFile.close(); //... Otherwise, can't delete
             cout << "File successfully moved";
             remove(from.c_str());
         }
