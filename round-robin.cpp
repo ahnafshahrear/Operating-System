@@ -56,7 +56,7 @@ int main()
         gantt_chart += "  " + z.first + "  |";
         border += "-------";
     }
-    cout << border << "\n" 
+    cout << "Gantt Chart:\n" << border << "\n" 
          << gantt_chart << "\n"
          << border << "\n"
          << "0";
@@ -88,14 +88,16 @@ int main()
     }
 }
 
-/*
-Input:
+/*//... Input Output:
+
+...............Input:
 3
 P1 24
 P2 3
 P3 3
 
-Output:
+..............Output:
+Gantt Chart:
 ---------------------------------------------------------
 |  P1  |  P2  |  P3  |  P1  |  P1  |  P1  |  P1  |  P1  |
 ---------------------------------------------------------
@@ -109,4 +111,5 @@ Process   |   Waiting Time   |   Turnaround Time
 P1              6                   30
 P2              4                   7
 P3              7                   10
-*/
+
+*///... Ahnaf Shahrear Khan...
