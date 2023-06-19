@@ -7,7 +7,7 @@
 - **Gmail: ahnafshahrearkhan@gmail.com**
 
 ## Index
-- **Create, Delete, Copy, Move file operation functions of an Operating System**
+- **Create, Delete, Copy, Move file operation functions of an Operating System ✓**
 - **Implementation of process schedulig algorithms ✓**
 	- **First Come First Serve algorithm ✓**
 	- **Shortest Job First algorithm ✓**
