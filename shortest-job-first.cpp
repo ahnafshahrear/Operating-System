@@ -45,7 +45,7 @@ int main()
         gantt_chart += "  " + z.first + "  |";
         border += "-------";
     }
-    cout << border << "\n" 
+    cout << "Gantt Chart:\n" << border << "\n" 
          << gantt_chart << "\n"
          << border << "\n"
          << "0";
@@ -77,26 +77,31 @@ int main()
     }
 }
 
-/*
+/*//... Input Output:
+
+...............Input:
 4
 P1 6
 P2 8
 P3 7
 P4 3
 
-Output:
------------------------------
-|  P4  |  P1  |  P3  |  P2  |
------------------------------
-0      3      9      16     24
+..............Output:
+Gantt Chart:
+------------------------------------
+|  P5  |  P4  |  P1  |  P3  |  P2  |
+------------------------------------
+0      2      5      11     18     26 
 
-Average waiting time = 7
-Average turnaround time = 13
+Average waiting time = 7.2
+Average turnaround time = 12.4
 
 Process   |   Waiting Time   |   Turnaround Time
 ------------------------------------------------
-P4              0                   3
-P1              3                   9
-P3              9                   16
-P2              16                  24
-*/
+P5              0                   2
+P4              2                   5
+P1              5                   11
+P3              11                  18
+P2              18                  26
+
+*///... Ahnaf Shahrear Khan...
