@@ -16,7 +16,7 @@
 - **Implement the algorithm for Deadlock Detection ✓**
 - **Implement the Resource Allocation Graph ✓**
 - **Implement the Threading & Synchronization applications of an Operating System**
-- **Implement the Memory Allocation Methods for fixed partition using First Fit, Best Fit & Worst Fit ✓**
+- **Implement the Memory Allocation Methods for fixed partition using First Fit ✓ Best Fit ✓ Worst Fit ✓**
 - **Implement the Paging Technique for memory management**
 - **Implement the FIFO or First In First Out page replacement algorithm ✓**
 - **Implement the LRU or Least Recently Used page replacement algorithm ✓**
