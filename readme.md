@@ -7,12 +7,12 @@
 - **Gmail: ahnafshahrearkhan@gmail.com**
 
 ## Index
-- **Simulate the Create, Rename, Delete, Copy & Move file operation functions of OS ✓**
+- **Simulate the Create, Rename, Delete, Copy & Move file operations of an Operating System ✓**
 - **Implement the FCFS or First Come First Serve CPU scheduling algorithm ✓**
 - **Implement the SJF or Shortest Job First CPU scheduling algorithm ✓**
 - **Implement the Round Robin CPU scheduling algorithm ✓**
 - **Implement the Priority Scheduling CPU scheduling algorithm ✓**
-- **Implement the Banker's Algorithm for deadlock detection & avoidance ✓**
+- **Implement the Banker's Algorithm ✓**
 - **Implement the algorithm for Deadlock Detection ✓**
 - **Implement the Resource Allocation Graph ✓**
 - **Implement the Threading & Synchronization applications of an Operating System**
