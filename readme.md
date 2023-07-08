@@ -21,4 +21,5 @@
 - **Implement the FIFO or First In First Out page replacement algorithm ✓**
 - **Implement the LRU or Least Recently Used page replacement algorithm ✓**
 - **Implement the Least Frequently Used page replacement algorithm ✓**
-- **Implement the Second Chance & Enhanced Second Chance page replacement algorithm**
+- **Implement the Second Chance page replacement algorithm ✓**
+- **Implement the Enhanced Second Chance page replacement algorithm**
