@@ -6,8 +6,8 @@ void printState(vector<int> frames)
 {
     for (int x: frames)
     {
-        if (x != -1) cout << " " << x; 
-        else cout << " -";
+        cout << " ";
+        x == -1 ? cout << "-" : cout << x;
     }
     cout << "\n";
 }
@@ -20,7 +20,7 @@ int main()
     map<int, int> reference; //... Page's reference bit
     int miss = 0, page;
 
-    int index = 0;
+    int index = 0; //... Frame pointer
     while (cin >> page)
     {
         bool found = false;
@@ -44,6 +44,8 @@ int main()
             if (frames[index] == -1)
             {
                 frames[index] = page;
+                index = (index + 1) % size;
+                break;
             }
             else if (reference[frames[index]] == 0)
             {
@@ -59,3 +61,32 @@ int main()
     }
     cout << "Total page fault = " << miss;
 }
+
+/*//... Sample Input-Output:
+____________________________________________________________________________________________________
+Input:
+3 
+0 4 1 4 2 4 3 4 2 4 0 4 1 4 2 4 3 4
+____________________________________________________________________________________________________
+Output:
+0 -> 0 - -
+4 -> 0 4 -
+1 -> 0 4 1
+4 ->
+2 -> 2 4 1
+4 ->
+3 -> 2 4 3
+4 ->
+2 ->
+4 ->
+0 -> 2 4 0
+4 ->
+1 -> 1 4 0
+4 ->
+2 -> 1 4 2
+4 ->
+3 -> 3 4 2
+4 ->
+Total page fault = 9
+
+*///...
