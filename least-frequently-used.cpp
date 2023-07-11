@@ -21,10 +21,8 @@ int main()
     int miss = 0;
     
     int page;
-    while(true)
+    while(cin >> page)
     {
-        cin >> page;
-        if (page == -1) break;
         count[page]++;
         bool found = false;
         for (int x: frames)

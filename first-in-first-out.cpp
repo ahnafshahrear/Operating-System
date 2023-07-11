@@ -6,8 +6,8 @@ void printState(vector<int> frames)
 {
     for (int x: frames)
     {
-        if (x != -1) cout << " " << x; 
-        else cout << " -";
+        cout << " ";
+        x == -1 ? cout << "-" : cout << x;
     }
     cout << "\n";
 }
@@ -17,10 +17,9 @@ int main()
     int size; //... Total number of frames
     cin >> size;
     vector<int> frames(size, -1);
-    queue<int> arrival_order;
-    int miss = 0;
+    int miss = 0, page;
 
-    int page;
+    int index = 0;
     while(cin >> page)
     {
         bool found = false;
@@ -38,23 +37,10 @@ int main()
             continue;
         }
         miss++;
-        int out = -1;
-        if (arrival_order.size() >= size)
-        {
-            out = arrival_order.front();
-            arrival_order.pop();
-        }
-        arrival_order.push(page);
-        for (int &x: frames)
-        {
-            if (x == out)
-            {
-                x = page;
-                cout << page << " ->";
-                printState(frames);
-                break;
-            }
-        }
+        frames[index] = page;
+        index = (index + 1) % size;
+        cout << page << " ->";
+        printState(frames);
     }
     cout << "Total page fault = " << miss;
 }
