@@ -30,6 +30,10 @@ int main()
         process now = waiting_list.front();
         waiting_list.pop();
         int quantum_now = min(now.burst, quantum);
+        if (waiting_list.size() == 0)
+        {
+            quantum_now = now.burst;
+        }
         time_now += quantum_now;
         timeline.push_back({now.id, time_now});
         now.burst -= quantum_now;
