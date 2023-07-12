@@ -94,7 +94,7 @@ int main()
     for (int i = 0; i < no_of_resource; i++)
     {
         cin >> requests[i];
-        if (requests[i] > x[process_id].max_need[i])
+        if (requests[i] > x[process_id].need[i])
         {
             cout << "Request exceeds maximum need. Can't accept request!";
             return 0;
